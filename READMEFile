@@ -1,0 +1,39 @@
+Introduction:
+ 1. This automation scripts designed for an E-commerce Application: 
+       https://magento.softwaretestingboard.com/
+ 2. The framework used here is TestNG framework and POM design Pattern
+ 3. This framework contains one TestFile and one PageFile for each page in the application
+ 4. TestFile contains test cases and PageFile contains locators of corresponding page
+ 5. The whole script is divided mainly into 7 components and the list is below:
+       a- RegisterPageTest
+       b- LoginPageTest
+       c- AccountsPageTest
+           - Contains item search, Add to cart and checkout part
+       d- CheckOutPageTest
+          - Contains providing billing address information and cost of the product and submitting of the page
+       e- ReviewAndPaymentTest
+          - Contains testing of review the order and proceed further.
+       f- SuccessPageTest
+           - When user has submitted the page, proceed to success page
+       g- MyAccountPageTest
+          - This section contains order history
+          
+ 6. Script takes some of the data from Properties file,DataProvide and Excel during test cases execution.
+ *********************************************************************************************************
+ How To Run the test:
+ 1.  Framework contains separate xml file to run the script for each pages. The location of XML file to run
+     the test cases are: *.\RCCL\src\test\resources\XMLTestCasesFile
+ 2. For reporting we can refer testNg by default report. 
+ *********************************************************************************************************
+ Note:
+ 1. Sometimes the application referred here for automation has response issue.
+ 2. Sometimes user user here expire, so in this case need to create new user and update this information
+  in properties file
+  Path of properties file:.\\src\\test\\resources\\config.properties
+  The key that need to update for new user is as follow:
+   - uname=testdemo@test.com
+   - password=Test1234
+ 3. Due to less availability unable to write code for API and Performance 
+  
+  
+ 
