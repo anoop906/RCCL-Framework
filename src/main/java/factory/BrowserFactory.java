@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserFactory {
-	private BrowserFactory() {
+	private BrowserFactory() { //No one can create object of this BrowserFactory class
 //		No logic require here
 	}
 	public static WebDriver createInstance(String browserName) {

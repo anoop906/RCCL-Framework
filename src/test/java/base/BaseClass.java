@@ -59,6 +59,7 @@ public class BaseClass {
 
 	public WebDriver getDriver() {
 		return drivers.get();
+		
 	}
 
 //
