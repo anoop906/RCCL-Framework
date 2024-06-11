@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testClasses.LoginPageTest">
+      <class name="testClasses.MyAccountPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="LoginTest"/>
+          <include name="verifyUserLandsOnMyOrdersPage"/>
+          <include name="verifyOrderNumber"/>
+          <include name="verifyUserLandsOnMyAccountPage"/>
+          <include name="PageInitMyAccountPage"/>
           <include name="init"/>
         </methods>
-      </class> <!-- testClasses.LoginPageTest -->
+      </class> <!-- testClasses.MyAccountPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

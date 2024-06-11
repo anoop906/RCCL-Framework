@@ -59,8 +59,8 @@ public class ElementUtil  {
 	public void doSelectRadioButton(By locator) {
 		getElement(locator).click();
 	}
-
-	public String doElementGetText(By locator) {
+	
+    public String doElementGetText(By locator) {
 		String eleText = getElement(locator).getText();
 		System.out.println("Element text is ====>" + eleText);
 		return eleText;

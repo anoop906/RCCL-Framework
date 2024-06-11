@@ -3,6 +3,8 @@ import org.testng.annotations.DataProvider;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -26,13 +28,13 @@ public class ExcelUtil {
 			for (int r = 0; r <rowCount; r++) {
 				XSSFRow row = ws.getRow(r+1);
 				for (int c = 0; c < colCount; c++) {
-					XSSFCell cell = row.getCell(c);
+					XSSFCell cell = row.getCell(c,MissingCellPolicy.CREATE_NULL_AS_BLANK);
 					switch (cell.getCellType()) {
 					case STRING:
 						obj[r][c] = cell.getStringCellValue();
 						break;
 					case NUMERIC:
-						obj[r][c] = (int)cell.getNumericCellValue();
+						obj[r][c] =Integer.toString((int)cell.getNumericCellValue());
 						break;
 					case BOOLEAN:
 						obj[r][c] = cell.getBooleanCellValue();
