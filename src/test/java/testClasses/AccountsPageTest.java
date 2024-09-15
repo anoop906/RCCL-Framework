@@ -38,6 +38,5 @@ public class AccountsPageTest extends BaseClass {
 	public void verifyUserNavigatedToCheckOutPage() {
 		accPage.clickOnProceedToCheckoutButton();
 	}
-	
-	
+
 }
